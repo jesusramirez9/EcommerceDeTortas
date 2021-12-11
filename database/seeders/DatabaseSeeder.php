@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\BlogCategory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
@@ -18,7 +19,9 @@ class DatabaseSeeder extends Seeder
         Storage::deleteDirectory('categories');
         Storage::deleteDirectory('subcategories');
         Storage::deleteDirectory('products');
+        Storage::deleteDirectory('posts');
 
+        Storage::makeDirectory('posts');
         Storage::makeDirectory('categories');
         Storage::makeDirectory('subcategories');
         Storage::makeDirectory('products');
@@ -37,6 +40,8 @@ class DatabaseSeeder extends Seeder
         $this->call(ColorSizeSeeder::class);
         
         $this->call(DepartmentSeeder::class);
-
+        
+        BlogCategory::factory(4)->create();
+        $this->call(BlogPostSeeder::class);
     }
 }

@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use App\Models\Image;
 use Illuminate\Database\Seeder;
 use App\Models\Product;
+use App\Models\Review;
+
 class ProductSeeder extends Seeder
 {
     /**
@@ -19,6 +21,9 @@ class ProductSeeder extends Seeder
             Image::factory(4)->create([
                 'imageable_id'=>$product->id,
                 'imageable_type'=> Product::class
+            ]);
+            Review::factory(5)->create([
+                'product_id' => $product->id
             ]);
         });
     }

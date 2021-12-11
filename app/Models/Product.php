@@ -36,6 +36,11 @@ class Product extends Model
 
 
     //Relacion uno a muchos
+
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
+
     public function sizes(){
         return $this->hasMany(Size::class);
     }

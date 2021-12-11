@@ -10,40 +10,26 @@
                 <div class="md:mt-0 mb-3">
                     <p class="titl_cata"> Catalogo / <span class="tipo_catalog">{{ $product->name }}</span> </p>
                 </div>
-
-
                 <div class="flexslider">
                     <ul class="slides">
 
                         @foreach ($product->images as $image)
-
                             <li class="" data-thumb="{{ Storage::url($image->url) }}">
                                 <img class="" src="{{ Storage::url($image->url) }}" />
                             </li>
-
                         @endforeach
-
                     </ul>
-
                 </div>
 
-                {{-- <div class="-mt-10 text-gray-700">
-                    <h2 class="font-bold text-lg">Descripción</h2>
-                    {!! $product->description !!}
-                </div>
-                <div class="mt-10 text-gray-700">
-                    <h2 class="font-bold text-lg">Especificaciones</h2>
-                    {!! $product->specification !!}
-                </div> --}}
             </div>
             <div class="-mt-8 md:mt-12">
+                <p class="text-base ">Calificación: {{round($product->reviews->avg('rating'),1)}} <i
+                    class="fas fa-star text-yellow-400 "></i></p>
                 <h1 class="text-xl font-bold  title_product">{{ $product->name }}</h1>
-                {{-- <div class="flex">
-                    <p class="text-trueGray-700">Marca: <a
-                            class="underline capitalize hover:text-orange-500">{{ $product->brand->name }}</a></p>
-                    <p class="text-trueGray-700 mx-6">5<i class="fa fa-star text-sm text-yellow-400"></i></p>
-                    <a class="underline hover:text-orange-600" href="">39 reseñas</a>
-                </div> --}}
+              <div class="flex">
+
+                    <a class="underline hover:text-orange-600" href="#resña">{{ count($product->reviews)}} comentarios de nuestros clientes</a>
+                </div> 
                 <p class="text-2xl my-4 font-semibold price_produc">S/ {{ $product->price }}</p>
                 <hr class=" mb-4 hrgreen">
                 {{-- <div class="bg-white rounded-lg shadow-lg mb-6 ">
@@ -122,6 +108,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div >
+            <a name="resña"></a>
+            @livewire('products-reviews', ['product' => $product])
         </div>
      
         <div class="text-center">

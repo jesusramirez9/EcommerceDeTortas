@@ -5,9 +5,10 @@ namespace App\Http\Livewire;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
-
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 class AddCartItemColor extends Component
 {
+    use LivewireAlert;
     public $product, $colors;
     public $color_id = "";
     public $qty = 1;
@@ -46,6 +47,7 @@ class AddCartItemColor extends Component
         ]);
 
         $this->quantity = qty_available($this->product->id, $this->color_id);
+        $this->alert('success', 'Producto agregado');
         $this->reset('qty');
         $this->emitTo('dropdown-cart','render');
     }

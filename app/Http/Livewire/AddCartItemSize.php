@@ -7,10 +7,11 @@ use App\Models\Size;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Livewire\Component;
 use Illuminate\Support\Facades\Storage;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class AddCartItemSize extends Component
 {
-
+    use LivewireAlert;
     public $product, $sizes;
     public $color_id = "";
     public $qty = 1;
@@ -62,6 +63,7 @@ class AddCartItemSize extends Component
         $this->quantity = qty_available($this->product->id, $this->color_id, $this->size_id);
 
         $this->reset('qty');
+        $this->alert('success', 'Producto agregado');
         $this->emitTo('dropdown-cart','render');
     }
 
