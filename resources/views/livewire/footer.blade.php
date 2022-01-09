@@ -17,7 +17,7 @@
             </div>
             <div>
                 <p>Llámanos al:</p>
-                <p class="text-yellow-400">948 147 369</p>
+                <p class="text-yellow-400 mb-4">948 147 369</p>
             </div>
         </div>
     </div>

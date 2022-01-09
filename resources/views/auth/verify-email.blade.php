@@ -11,7 +11,7 @@
             <div class="alselcent">
                 <div class="flex items-center justify-center text-center pb-6 ">
                     <div>
-                        <img src="{{ asset('images/login_user/Iso.png') }}" alt="">
+                        <img src="{{asset('img/logo.png')}}" class="w-16"  alt="">
                     </div>
                     <div>
                         <p class="ml-2 text-xl md:text-2xl txtbrde font-bold">Verificación de cuenta</p>

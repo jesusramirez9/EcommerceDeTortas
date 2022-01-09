@@ -78,7 +78,7 @@
             Lista de subcategorías
         </x-slot>
         <x-slot name="description">
-            Aquí encontraras todas las subcategorias agregadas
+            Aquí encontraras todas las subcategorias agregadas que servirán para el filtro
         </x-slot>
         <x-slot name="content">
             <table class="text-gray-600">

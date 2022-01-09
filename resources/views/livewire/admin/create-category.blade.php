@@ -1,5 +1,5 @@
 <div>
-    <x-jet-form-section submit="save" class="mb-6">
+    {{-- <x-jet-form-section submit="save" class="mb-6">
         <x-slot name="title">
             Crear nueva categoría
         </x-slot>
@@ -71,14 +71,14 @@
             </x-jet-button>
         </x-slot>
 
-    </x-jet-form-section>
+    </x-jet-form-section> --}}
 
     <x-jet-action-section>
         <x-slot name="title">
-            Lista de categorías
+            Categoría principal
         </x-slot>
         <x-slot name="description">
-            Aquí encontraras todas las categorias agregadas
+            Aquí agregarás todas las categorías de tu negocio
         </x-slot>
         <x-slot name="content">
             <table class="text-gray-600">

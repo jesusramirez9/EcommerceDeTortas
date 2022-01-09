@@ -6,9 +6,7 @@
                 <div>
                     <article>
                         <textarea wire:model="comment" placeholder="Ingrese una reseña del producto"
-                            class="border-gray-400 border-opacity-20 border-2" name="" id="" cols="40" rows="4">
-
-                        </textarea>
+                            class="border-gray-400 border-opacity-20 border-2" name="" id="" cols="30" rows="4"></textarea>
                         <div class="flex items-center">
                             <button wire:click="store"
                                 class="bg-green-800 py-3 px-4 mt-2 text-white rounded-xl mr-3">Comentar</button>
@@ -63,9 +61,15 @@
 
                     </article>
                 </div>
+                @else
+
+            <p class="text-gray-800 mt-8 mb-4"> Para comentar y dar valoración a algunos de nuestros productos, deberás registrarte a nuestra plataforma</p>
+            <a href="{{route('register')}}" class="bg-red-400 text-white font-bold py-2 px-2 rounded-lg">Regístrate aqui</a>
+
+
             @endauth
             <p class="text-gray-800 mt-8 mb-4">{{ $product->reviews->count() }} Valoraciones</p>
-            <div class="contenspace h-80 overflow-auto">
+            <div class="contenspace overflow-auto">
                
                 @foreach ($product->reviews as $review)
                     <article class="flex mb-4 text-gray-800">
@@ -99,7 +103,12 @@
 
                                 @endswitch
                                 {{ $review->comment }}
+                                {{-- <div class="flex float-right">
+                                   <p class="hover:text-red-400 cursor-pointer">  <p class="text-end text-sm mx-2 hover:text-red-400 cursor-pointer" wire:click="delete"><i class="fas fa-trash"></i> Eliminar</p></p>
+                                    
+                                </div> --}}
                             </div>
+                            
                         </div>
                     </article>
                 @endforeach

@@ -8,7 +8,7 @@
             <div>
                 <!-- Place somewhere in the <body> of your page -->
                 <div class="md:mt-0 mb-3">
-                    <p class="titl_cata"> Catalogo / <span class="tipo_catalog">{{ $product->name }}</span> </p>
+                    <p class="titl_cata"> Producto / <span class="tipo_catalog">{{ $product->name }}</span> </p>
                 </div>
                 <div class="flexslider">
                     <ul class="slides">
@@ -113,7 +113,7 @@
         <div >
             <a name="resña"></a>
             @livewire('products-reviews', ['product' => $product])
-        </div>
+        </div> 
      
         <div class="text-center">
             <div class="text-center py-4 md:py-8 ">
@@ -127,7 +127,7 @@
                         @foreach ($subcategory->products as $product)
                        
                             <div class="mx-4">
-                                <figure>
+                                <figure >
                                         
                                     @if ($product->images->count())
                                         <img class="h-80 w-full object-cover object-center scrollflow -slide-bottom -opacity"
@@ -139,8 +139,10 @@
                                     @endif
 
                                 </figure>
+                                <a href="{{ route('products.show', $product) }}">
                                 <p class="titl_product lg:text-left">{{ $product->name }}</p>
-                                <p class="price_prodc lg:text-left">{{ $product->price }}</p>
+                                <p class="price_prodc lg:text-left">S/ {{ $product->price }}</p>
+                                </a>
                             </div>
                         @endforeach
                     @endforeach

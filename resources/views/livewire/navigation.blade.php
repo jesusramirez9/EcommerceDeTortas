@@ -18,7 +18,7 @@
             <a href="{{ route('conocenos') }}"  class="mx-6 text-white font-bold hover:linktran hover:bg-yellow-500 hover:px-4 hover:rounded-md hidden lg:block  {{ request()->is('conocenos') ? 'active linktran  bg-yellow-500 px-4 rounded-md underline' : '' }}">
                 Conócenos
             </a>
-            <a href="http://127.0.0.1:8000/categories/coqueteos-y-antojitos"
+            <a href="http://127.0.0.1:8000/categories/pasteles"
                 class="mx-6 text-white font-bold hover:bg-yellow-500 hover:px-4 hover:linktran hover:rounded-md hidden md:block  {{ request()->is('categories/*') ? 'active linktran  bg-yellow-500 px-4 rounded-md underline' : '' }}">
                 Catálogo
             </a>
@@ -108,9 +108,9 @@
                 @livewire('dropdown-cart')
             </div>
     
-            <a href="" class="md:mx-6"><img class="w-9 h-9" src="{{ asset('img/iconos/fb.png') }}"
+            <a href="https://www.facebook.com/Coqueteos.antojitos" class="md:mx-6"><img class="w-9 h-9" src="{{ asset('img/iconos/fb.png') }}"
                     alt=""></a>
-            <a href="" class=""><img class="w-9 h-9" src="{{ asset('img/iconos/insta.png') }}"
+            <a href="https://www.instagram.com/coqueteos_antojitos/" class=""><img class="w-9 h-9" src="{{ asset('img/iconos/insta.png') }}"
                     alt=""></a>
     
         </div>
@@ -188,7 +188,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="http://127.0.0.1:8000/categories/coqueteos-y-antojitos"
+                        <a href="http://127.0.0.1:8000/categories/pasteles"
                             class="py-2 px-4 text-sm flex items-center {{ request()->is('categories/*') ? 'active text-yellow-500 underline' : '' }}">
                             <span class="flex justify-center w-9">
                                 {!! $category->icon !!}
@@ -205,7 +205,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="py-2 px-4 text-sm flex items-center">
+                        <a href="{{ route('contacto') }}" class="py-2 px-4 text-sm flex items-center">
                             <span class="flex justify-center w-9">
                                 {!! $category->icon !!}
                             </span>

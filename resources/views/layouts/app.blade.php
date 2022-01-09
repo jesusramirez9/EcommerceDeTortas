@@ -48,7 +48,7 @@
 
 
         <!-- Page Content -->
-        <main class="pb-8">
+        <main >
             {{ $slot }}
         </main>
 

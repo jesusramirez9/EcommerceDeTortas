@@ -95,8 +95,8 @@
             <div class="flex flex-col items-center mt-2 md:mt-0 py-4">
                 <x-cart></x-cart>
                 <p class="text-sm lg:text-lg text-gray-700 mt-4">TU BOLSA DE COMPRAS ESTÁ VACÍO</p>
-                <x-button-enlace href="/" class="mt-4 bg-yellow-600 px-16">
-                    Ir al inicio
+                <x-button-enlace href="http://127.0.0.1:8000/categories/pasteles" class="mt-4 bg-yellow-600 px-16">
+                    Nuestros productos
                 </x-button-enlace>
             </div>
 

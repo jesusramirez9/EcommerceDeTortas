@@ -1,5 +1,5 @@
 <div>
-     <div class="bg-white rounded-lg shadow-lg mb-6">
+     {{-- <div class="bg-white rounded-lg shadow-lg mb-6">
         <div class="px-6 py-2 flex justify-between items-center">
             <h1 class="font-semibold text-gray-700 uppercase">{{ $category->name }}</h1>
             <div class="hidden md:block grid grid-cols-2 border border-gray-200 divide-x divide-gray-200 text-gray-500">
@@ -9,7 +9,7 @@
                     wire:click="$set('view','list')"></i>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 xl:gap-8">
         <div class="text-center btn_filter_rp">
@@ -201,7 +201,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="accordion-container">
+                        {{-- <div class="accordion-container">
                             <a class="accordion-titulo open">Colores<span class="toggle-icon"></span></a>
                             <div class="accordion-content block">
                                 <ul class="grid grid-cols-6 md:grid-cols-4 lg:grid-cols-4 gap-2 ">
@@ -219,8 +219,8 @@
                                     @endforeach
                                 </ul>
                             </div>
-                        </div>
-                        <div class="accordion-container">
+                        </div> --}}
+                        {{-- <div class="accordion-container">
                             <a class="accordion-titulo open">Tallas<span class="toggle-icon"></span></a>
                             <div class="accordion-content block">
                                 <ul class="divide-y divide-gray-200">
@@ -232,7 +232,7 @@
                                     @endforeach
                                 </ul>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </aside>
             </div>

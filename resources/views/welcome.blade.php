@@ -246,7 +246,7 @@
     </div>
 
 
-    <div class="mt-10  container px-0 md:px-2">
+    <div class="mt-10  container px-0 md:px-2 mb-8">
         <div class="grid grid-cols-1 md:grid-cols-5 md:gap-8">
             <div class="md:col-span-2">
                 <img src="{{ asset('img/home/a.jpg') }}" class="w-full" alt="">
