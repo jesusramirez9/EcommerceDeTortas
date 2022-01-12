@@ -1,15 +1,13 @@
 <div>
-     {{-- <div class="bg-white rounded-lg shadow-lg mb-6">
-        <div class="px-6 py-2 flex justify-between items-center">
-            <h1 class="font-semibold text-gray-700 uppercase">{{ $category->name }}</h1>
-            <div class="hidden md:block grid grid-cols-2 border border-gray-200 divide-x divide-gray-200 text-gray-500">
-                <i class="fas fa-border-all p-3 cursor-pointer {{ $view == 'grid' ? 'rronmaa' : '' }}"
-                    wire:click="$set('view','grid')"></i>
-                <i class="fas fa-th-list p-3 cursor-pointer {{ $view == 'list' ? 'rronmaa' : '' }}"
-                    wire:click="$set('view','list')"></i>
-            </div>
+    <div class="bg-white rounded-lg shadow-lg mb-10">
+        <div class="px-6 py-2 grid grid-cols-3">
+            <h1 class="font-semibold text-gray-700 uppercase">Descarga nuestros catálogos: </h1>
+           <div>
+               <a href="{{asset('catalogo/bodas.pdf')}}" class="bg-red-500 hover:bg-red-600 hover:px-5  cursor-pointer py-2 px-4 text-white font-semibold rounded-lg"  download="bodas.pdf"  target="_blank">Bodas</a>     
+           </div>
+           
         </div>
-    </div> --}}
+    </div> 
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 xl:gap-8">
         <div class="text-center btn_filter_rp">

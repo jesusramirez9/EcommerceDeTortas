@@ -10,7 +10,7 @@ use Illuminate\Queue\SerializesModels;
 class ResumenMailable extends Mailable
 {
     use Queueable, SerializesModels;
-    public $subject = "Resumen de compra";
+    public $subject = "Resumen de reserva";
     public $compra;
     /**
      * Create a new message instance.

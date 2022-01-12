@@ -56,6 +56,8 @@
                             <p class="text-sm">{{ $order->address }}</p>
                             <p>{{ $order->department->name }} - {{ $order->city->name }} -
                                 {{ $order->district->name }}</p>
+                            <p class="text-sm">Referencia:</p>
+                                <p class="text-sm colorbroywm ">{{ $envio->references }}</p>
                         @endif
                     </div>
 

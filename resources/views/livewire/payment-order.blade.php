@@ -59,6 +59,8 @@
                             <p class="text-sm colorbroywm font-bold">{{ $envio->address }}</p>
                             <p class="colorbroywm font-bold">{{ $envio->department }} - {{ $envio->city }} -
                                 {{ $envio->district }}</p>
+                                <p class="text-sm colorbroywm font-bold">Referencia:</p>
+                                <p class="text-sm colorbroywm font-bold  ">{{ $envio->references }}</p>
                         @endif
                     </div>
 
@@ -167,7 +169,7 @@
                     Realizar pedido
                 </x-jet-button> --}}
 
-                <div class="kr-embedded" kr-form-token="<?php echo $formToken; ?>">
+                {{-- <div class="kr-embedded" kr-form-token="<?php echo $formToken; ?>">
                     <!-- payment form fields -->
                     <div class="kr-pan"></div>
                     <div class="kr-expiry"></div>
@@ -178,16 +180,21 @@
 
                     <!-- error zone -->
                     <div class="kr-form-error"></div>
-                </div>
+                </div> --}}
+
+                <x-jet-button wire:loading.attr="disabled" wire:target="create_order" class="mt-6 mb-4 bgvrdff"
+                wire:click="create_order">
+                Realizar pedido
+            </x-jet-button> 
             </div>
 
         </div>
 
     </div>
 
-    <script src="<?php echo $client->getClientEndpoint(); ?>/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
+    {{-- <script src="<?php echo $client->getClientEndpoint(); ?>/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
         kr-public-key="<?php echo $client->getPublicKey(); ?>" kr-post-url-success="{{ route('orders.pay', $order) }}">
-    </script>
+    </script> --}}
 
 
 </div>

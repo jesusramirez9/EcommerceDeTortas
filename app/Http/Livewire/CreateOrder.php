@@ -38,18 +38,18 @@ class CreateOrder extends Component
 
     public function mount(){
         $this->departments = Department::all();
-      $qty_total = 0;
-        foreach (Cart::content() as $item) {
-            $qty_total += $item->qty; 
-         }
+    //   $qty_total = 0;
+    //     foreach (Cart::content() as $item) {
+    //         $qty_total += $item->qty; 
+    //      }
          
-         if($qty_total == 1){
-            $this->shipping_cost = 15;
-         }elseif($qty_total == 2){
-            $this->shipping_cost = 20;
-         }else{
-            $this->shipping_cost = 0;
-         }
+    //      if($qty_total == 1){
+    //         $this->shipping_cost = 15;
+    //      }elseif($qty_total == 2){
+    //         $this->shipping_cost = 20;
+    //      }else{
+    //         $this->shipping_cost = 0;
+    //      }
 
     }
 
@@ -70,8 +70,8 @@ class CreateOrder extends Component
 
     public function updatedCityId($value){
 
-        // $city = City::find($value);
-    //  $this->shipping_cost = $city->cost;
+        $city = City::find($value);
+        $this->shipping_cost = $city->cost;
         
 
         $this->districts = District::where('city_id', $value)->get();

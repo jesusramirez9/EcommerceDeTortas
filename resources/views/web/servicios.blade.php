@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="container mt-10">
+    <div class="container mt-10 mb-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
             <div class="bg-1 ">
                 <div class=" text-justify pt-4 lg:pt-12 pb-4 lg:pb-12">

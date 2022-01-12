@@ -73,20 +73,23 @@
                 <div>
                     <p class="text-lg colorverderr font-bold uppercase">Envío</p>
                     @if ($order->envio_type == 1)
-                        <p class="text-sm colorbroywm font-bold">Los productos deben ser recogidos en tienda</p>
-                        <p class="text-sm colorbroywm font-bold">Calle falsa 123</p>
+                        <p class="text-sm colorbroywm font-semibold">Los productos deben ser recogidos en tienda</p>
+                        <p class="text-sm colorbroywm ">Calle falsa 123</p>
                     @else
-                        <p class="text-sm colorbroywm font-bold">Los productos serán enviados a:</p>
-                        <p class="text-sm colorbroywm font-bold">{{ $envio->address }}</p>
-                        <p class="colorbroywm font-bold">{{ $envio->department }} - {{ $envio->city }} -
+                        <p class="text-sm colorbroywm font-semibold">Los productos serán enviados a:</p>
+                        <p class="text-sm colorbroywm ">{{ $envio->address }}</p>
+                        <p class="colorbroywm ">{{ $envio->department }} - {{ $envio->city }} -
                             {{ $envio->district }}</p>
+                        <p class="text-sm colorbroywm font-semibold">Referencia del lugar:</p>
+                        <p class="text-sm colorbroywm ">{{ $envio->references }}</p>
+
                     @endif
                 </div>
 
                 <div>
                     <p class="text-lg colorverderr font-bold uppercase">Datos de contacto</p>
-                    <p class="text-sm colorverderr font-bold">Persona que recibirá el producto: <span class="colorbroywm font-bold">{{ $order->contact }}</span> </p>
-                    <p class="text-sm colorverderr font-bold">Teléfono de contacto: <span class="colorbroywm font-bold"> {{ $order->phone }}</span></p>
+                    <p class="text-sm colorverderr font-semibold">Persona que recibirá el producto: <span class="colorbroywm ">{{ $order->contact }}</span> </p>
+                    <p class="text-sm colorverderr font-semibold">Teléfono de contacto: <span class="colorbroywm "> {{ $order->phone }}</span></p>
                 </div>
             </div>
         </div>

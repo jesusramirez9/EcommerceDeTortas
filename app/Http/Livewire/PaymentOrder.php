@@ -51,6 +51,8 @@ class PaymentOrder extends Component
         return redirect()->route('orders.show', $this->order);
     }
 
+        
+
 
 
     public function render()
