@@ -15,6 +15,7 @@ use App\Http\Livewire\Admin\CreatePost;
 use App\Http\Livewire\Admin\ShowCategory;
 use App\Http\Livewire\Admin\DepartmentComponent;
 use App\Http\Livewire\Admin\ShowDepartment;
+use App\Http\Livewire\Admin\ShowFlayer;
 use App\Http\Livewire\Admin\ShowPost;
 use App\Http\Livewire\Admin\UserComponent;
 
@@ -44,3 +45,5 @@ Route::get('cities/{city}', CityComponent::class )->name('admin.cities.show');
 Route::get('users', UserComponent::class )->name('admin.users.index');
 
 Route::get('noticia', ShowPost::class )->name('admin.noticia.index');
+
+Route::get('publicidad', ShowFlayer::class )->name('admin.publicidad.index');

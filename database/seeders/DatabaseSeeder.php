@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
         Storage::deleteDirectory('subcategories');
         Storage::deleteDirectory('products');
         Storage::deleteDirectory('posts');
+        Storage::deleteDirectory('flayers');
 
+        Storage::makeDirectory('flayers');
         Storage::makeDirectory('posts');
         Storage::makeDirectory('categories');
         Storage::makeDirectory('subcategories');
@@ -42,6 +44,8 @@ class DatabaseSeeder extends Seeder
         $this->call(DepartmentSeeder::class);
         
         \App\Models\Posts::factory(10)->create();
+        \App\Models\Flayer::factory(10)->create();
+
 
     }
 }

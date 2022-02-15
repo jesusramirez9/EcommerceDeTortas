@@ -22,7 +22,10 @@ class FlayerFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->sentence(),
+            'description' => $this->faker->text(),
+            'image' =>'flayers/'.$this->faker->image('public/storage/flayers', 640, 480, null, false),
+            'status' => 2,
         ];
     }
 }

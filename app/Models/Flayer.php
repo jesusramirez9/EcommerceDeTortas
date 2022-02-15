@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Flayer extends Model
 {
     use HasFactory;
+
+    protected $fillable=['title','description', 'image'];
+
+    const BORRADOR = 1;
+    const PUBLICADO = 2;
+    
 }

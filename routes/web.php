@@ -28,7 +28,7 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
-Route::get('/', WelcomeController::class)->name('home');
+Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
 Route::get('categories/{category}', [CategoryController::class, 'show'])->name('categories.show');
 

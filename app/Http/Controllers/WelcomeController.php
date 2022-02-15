@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-   public function __invoke()
+   public function index()
    {
      
       // session()->flash('flash.bannerStyle', 'danger');
