@@ -11,9 +11,11 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Livewire\Admin\BrandComponent;
 use App\Http\Livewire\Admin\CityComponent;
 use App\Http\Livewire\Admin\ColorSize;
+use App\Http\Livewire\Admin\CreatePost;
 use App\Http\Livewire\Admin\ShowCategory;
 use App\Http\Livewire\Admin\DepartmentComponent;
 use App\Http\Livewire\Admin\ShowDepartment;
+use App\Http\Livewire\Admin\ShowPost;
 use App\Http\Livewire\Admin\UserComponent;
 
 Route::get('/', ShowProducts::class)->name('admin.index');
@@ -40,3 +42,5 @@ Route::get('departments/{department}', ShowDepartment::class)->name('admin.depar
 Route::get('cities/{city}', CityComponent::class )->name('admin.cities.show');
 
 Route::get('users', UserComponent::class )->name('admin.users.index');
+
+Route::get('noticia', ShowPost::class )->name('admin.noticia.index');

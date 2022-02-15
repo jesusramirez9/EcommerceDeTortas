@@ -11,9 +11,12 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Livewire\CreateOrder;
 use App\Http\Livewire\PaymentOrder;
 use App\Http\Livewire\ShoppingCart;
+use App\Http\Livewire\ShowPost;
 use App\Models\Order;
+use App\Models\User;
 use Gloudemans\Shoppingcart\Facades\Cart;
-
+use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,12 +71,39 @@ Route::get('servicios', function () {
     return view('web.servicios');
 })->name('servicios');
 
+Route::get('noticia', function(){
+    return view('web.noticias');
+})->name('noticia.show');
 
 Route::get('contactanos',[ContactoController::class, 'index'])->name('contacto');
 
 Route::post('contactanos',[ContactoController::class, 'store'])->name('contacto.store');
 
+Route::get('/login-google', function () {
+    return Socialite::driver('google')->redirect();
+});
 
+Route::get('/google-callback', function () {
+    $user = Socialite::driver('google')->user();
+
+    // $user->token
+    $userExist = User::where('external_id', $user->id)->where('external_auth', 'google')->firts();
+    if($userExist){
+        Auth::login($userExist);
+    }else{
+      $userNew =  User::create([
+            'name' => $user->name,
+            'email' => $user->email,
+            'avatar' => $user->avatar,
+            'external_id' => $user->id,
+            'external_auth' => 'google'
+        ]);
+
+        Auth::login($userNew);
+    }
+
+    return redirect('/');
+});
 
 
 // Route::middleware([' ', 'verified'])->get('/dashboard', function () {

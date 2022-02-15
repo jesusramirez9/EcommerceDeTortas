@@ -25,6 +25,9 @@
             <a href="{{ route('servicios') }}" class="mx-6 text-white font-bold hover:linktran hover:bg-yellow-500 hover:px-4 hover:rounded-md hidden md:block  {{ request()->is('servicios') ? 'active linktran bg-yellow-500 px-4 rounded-md underline' : '' }}">
                 Servicios
             </a>
+            <a href="{{ route('noticia.show') }}" class="mx-6 text-white font-bold hover:linktran hover:bg-yellow-500 hover:px-4 hover:rounded-md hidden md:block  {{ request()->is('noticia') ? 'active linktran bg-yellow-500 px-4 rounded-md underline' : '' }}">
+                Creaciones
+            </a>
             <a href="{{ route('contacto') }}" class="mx-6 text-white font-bold hover:linktran hover:bg-yellow-500 hover:px-4 hover:rounded-md hidden md:block  {{ request()->is('contactanos') ? 'active linktran  bg-yellow-500 px-4 rounded-md underline' : '' }}">
                 Escríbenos
             </a>

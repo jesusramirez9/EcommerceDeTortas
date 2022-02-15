@@ -143,7 +143,6 @@ background-color: #FFF7F4;
 }
 .mytabs input[type='radio']:checked + label {
     
-    color: #9c303d;
     text-decoration: underline;
     text-underline-position: under;
 }

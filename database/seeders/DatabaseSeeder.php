@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
         
         $this->call(DepartmentSeeder::class);
         
-        BlogCategory::factory(4)->create();
-        $this->call(BlogPostSeeder::class);
+        \App\Models\Posts::factory(10)->create();
+
     }
 }

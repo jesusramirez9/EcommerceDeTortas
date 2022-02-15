@@ -40,6 +40,11 @@ return [
     'izipay'=>[
         'key'=>env('IZIPAY_PUBLIC_KEY'),
         'token'=>env('IZIPAY_ACCESS_TOKEN'),
-    ]
+    ],
+    'google' => [
+        'client_id' => env('GOOGLE_OAUTH_ID'),
+        'client_secret' => env('GOOGLE_OAUTH_KEY'),
+        'redirect' => env('APP_URL'),
+    ],
 
 ];
