@@ -312,7 +312,7 @@
         </div>
     </div>
 
-    <div>
+    <div >
         @livewire('show-flayer')
     </div>
 
@@ -449,6 +449,7 @@
                 ]
             });
         </script>
+        
     @endpush
 
 </x-app-layout>
